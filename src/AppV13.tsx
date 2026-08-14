@@ -3,8 +3,9 @@ import AppV12 from './AppV12';
 import DfcmV13 from './DfcmV13';
 import './v13.css';
 
-export default function AppV13(){
- const[dfcm,setDfcm]=useState(false);
+type Props={startDfcm?:boolean;onReturn?:()=>void};
+export default function AppV13({startDfcm=false,onReturn}:Props){
+ const[dfcm,setDfcm]=useState(startDfcm);
  useEffect(()=>{
   if(dfcm)return;
   const intercept=(e:MouseEvent)=>{
@@ -17,5 +18,6 @@ export default function AppV13(){
   document.addEventListener('click',intercept,true);
   return()=>document.removeEventListener('click',intercept,true);
  },[dfcm]);
- return dfcm?<DfcmV13 onExit={()=>{setDfcm(false);setTimeout(()=>window.scrollTo({top:0}),0)}}/>:<div className="v13-shell"><AppV12/></div>;
+ const leave=()=>{if(onReturn){onReturn();return;}setDfcm(false);setTimeout(()=>window.scrollTo({top:0}),0)};
+ return dfcm?<DfcmV13 onExit={leave}/>:<div className="v13-shell"><AppV12/></div>;
 }
