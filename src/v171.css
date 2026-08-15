@@ -1,0 +1,80 @@
+/* V1.7.1 — fidélité renforcée à la maquette mobile */
+@media (max-width:900px){
+  html,body,#root{width:100%;min-height:100%;margin:0;background:#02080d!important;overflow-x:hidden!important}
+  .v14-app{display:block!important;width:100%!important;min-height:100vh!important;padding:0 0 92px!important;background:linear-gradient(180deg,#02080d,#06131d 54%,#02080d)!important}
+  .v14-main{margin:0!important;width:100%!important;max-width:none!important;padding:0!important}
+
+  /* La navigation latérale devient exclusivement une barre d'application en bas. */
+  .v14-side{position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;width:100%!important;height:84px!important;min-height:84px!important;z-index:999!important;display:block!important;background:rgba(2,8,13,.97)!important;border:0!important;border-top:1px solid rgba(185,133,66,.66)!important;box-shadow:0 -10px 30px rgba(0,0,0,.48)!important;backdrop-filter:blur(18px)!important}
+  .v14-side .v14-brand,.v14-side .v14-values{display:none!important}
+  .v14-side nav{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;align-items:stretch!important;width:100%!important;height:84px!important;margin:0!important;padding:0 3px!important;overflow:hidden!important}
+  .v14-side nav button{position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:5px!important;width:100%!important;height:84px!important;margin:0!important;padding:7px 1px 5px!important;border:0!important;border-radius:0!important;background:transparent!important;color:#cdbb99!important;font:10px/1.05 Georgia,serif!important;text-align:center!important;white-space:nowrap!important}
+  .v14-side nav button:nth-child(n+7){display:none!important}
+  .v14-side nav button span{display:block!important;width:38px!important;height:38px!important;margin:0 auto!important;background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;filter:drop-shadow(0 2px 7px rgba(215,168,79,.16))!important}
+  .v14-side nav button.active{background:linear-gradient(180deg,rgba(213,162,72,.19),rgba(6,14,20,.08))!important;color:#efc56f!important;box-shadow:inset 0 2px 0 #d9a94e!important}
+  .v14-side nav button.active span{width:42px!important;height:42px!important;filter:drop-shadow(0 0 9px rgba(224,169,70,.45))!important}
+
+  /* En-tête réduit : identité seulement, pas de seconde navigation. */
+  .v14-top{position:relative!important;top:auto!important;left:auto!important;right:auto!important;width:100%!important;height:74px!important;padding:0 17px!important;margin:0!important;background:#02080df7!important;border-bottom:1px solid rgba(185,133,66,.48)!important;box-sizing:border-box!important}
+  .v14-top>.v14-mini-brand:before{width:48px!important;height:55px!important}
+  .v14-top>.v14-mini-brand:after{font-size:15px!important;line-height:1.02!important;letter-spacing:.055em!important}
+  .v14-top>div:last-child>button:not(.student){display:none!important}
+  .v14-top .student{width:48px!important;height:48px!important}
+
+  /* Hero : proportions de la maquette. */
+  .v14-world{height:520px!important;min-height:520px!important;background-size:auto 100%!important;background-position:60% center!important}
+  .v14-welcome{left:7.2%!important;right:8%!important;top:44px!important}
+  .v14-welcome h1{font-size:58px!important;line-height:.91!important;letter-spacing:-.025em!important;margin:13px 0 23px!important}
+  .v14-welcome blockquote{font-family:Georgia,serif!important;font-size:15px!important;line-height:1.38!important;max-width:255px!important}
+
+  /* Quatre cartes centrales : dimensions, couleurs et centrage de la maquette. */
+  .v14-dashboard{display:block!important;width:100%!important;box-sizing:border-box!important;padding:0 13px 24px!important;margin:0!important}
+  .v14-center{width:100%!important;max-width:none!important}
+  .v14-cardrow{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;width:100%!important;margin:-12px 0 0!important;padding:0!important}
+  .v14-cardrow article{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;min-height:215px!important;height:215px!important;padding:15px 11px 12px!important;box-sizing:border-box!important;border:1px solid rgba(185,133,66,.72)!important;border-radius:2px!important;overflow:hidden!important}
+  .v14-cardrow article:nth-child(1){background:linear-gradient(145deg,#11182c 0%,#07101b 100%)!important}
+  .v14-cardrow article:nth-child(2){background:linear-gradient(145deg,#102b1d 0%,#06150f 100%)!important}
+  .v14-cardrow article:nth-child(3){background:linear-gradient(145deg,#241711 0%,#0e0c0f 100%)!important}
+  .v14-cardrow article:nth-child(4){background:linear-gradient(145deg,#092538 0%,#05121e 100%)!important}
+  .v14-cardrow article:before{inset:5px!important;border-color:rgba(231,187,99,.15)!important}
+  .v14-cardrow small{display:block!important;width:100%!important;margin:0!important;text-align:center!important;color:#e0ab4f!important;font:700 9px/1.2 Arial,sans-serif!important;letter-spacing:.08em!important}
+  .v14-cardrow h3{display:flex!important;align-items:center!important;justify-content:center!important;min-height:52px!important;margin:11px 0 5px!important;text-align:center!important;color:#f2e4c9!important;font:400 20px/1.08 Georgia,serif!important}
+  .v14-cardrow p{margin:0 auto!important;max-width:95%!important;text-align:center!important;color:#c8bda9!important;font:11px/1.4 Georgia,serif!important}
+  .v14-cardrow button{margin-top:auto!important;width:100%!important;padding:10px 2px 0!important;border:0!important;border-top:1px solid rgba(157,112,54,.42)!important;background:none!important;color:#e5b158!important;font:11px/1.2 Georgia,serif!important;text-align:center!important}
+  .points{display:flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;margin:7px 0 1px!important}
+  .points span{width:76px!important;height:82px!important;flex:none!important}
+  .points strong{font:400 35px/1 Georgia,serif!important;color:#efc36e!important}
+
+  /* Carte du château, pleine largeur et plus proche du modèle. */
+  .v14-map{width:100%!important;margin:10px 0 0!important;padding:0!important;border:1px solid rgba(185,133,66,.72)!important;box-sizing:border-box!important}
+  .v14-mapscene{height:365px!important;min-height:365px!important;background-size:cover!important;background-position:center!important}
+  .v14-map header{padding:13px 14px!important}.v14-map header small{font-size:10px!important;letter-spacing:.08em!important}
+  .room{border:1px solid rgba(203,148,70,.9)!important;background:rgba(2,12,20,.90)!important;color:#f1dfbd!important;box-shadow:0 5px 14px #000b,inset 0 0 0 1px rgba(235,187,94,.10)!important}
+
+  /* Les deux blocs du bas sont obligatoirement empilés, jamais côte à côte. */
+  .v14-right{display:flex!important;flex-direction:column!important;align-items:stretch!important;width:100%!important;max-width:none!important;gap:10px!important;margin:10px 0 0!important;padding:0!important}
+  .profilecard,.challengecard{display:block!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;float:none!important;margin:0!important}
+  .profilecard{min-height:146px!important;height:auto!important;padding:17px 42px 16px 135px!important;background:linear-gradient(150deg,#082130,#04111b)!important}
+  .profilecard .avatar{left:18px!important;top:19px!important;width:96px!important;height:96px!important}
+  .profilecard h2{font-size:23px!important;line-height:1!important;margin:4px 0 3px!important;color:#e7b65e!important}
+  .profilecard>p{font-size:11px!important;margin:0 0 9px!important;color:#c6b89e!important}
+  .profilecard dl{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:5px 8px!important;border-top:1px solid rgba(155,109,52,.35)!important;padding-top:8px!important}
+  .profilecard dt,.profilecard dd{display:block!important;margin:0!important}.profilecard dt{font-size:8px!important;color:#cda05b!important}.profilecard dd{font-size:9px!important;color:#ddd0b8!important}
+  .profilecard dt:nth-of-type(n+4),.profilecard dd:nth-of-type(n+4){display:none!important}
+  .challengecard{padding:13px 14px 9px!important;background:linear-gradient(155deg,#071b28,#041019)!important}
+  .challengecard>small{font-size:11px!important;margin-bottom:5px!important}
+  .challengecard article{min-height:58px!important;padding:11px 34px 10px 6px!important;border-bottom:1px solid rgba(132,94,47,.25)!important}
+  .challengecard article b{font-size:14px!important}.challengecard article p{font-size:10px!important}
+
+  /* Les sous-pages gardent leur mise en page actuelle. */
+  .v14-sub{padding-bottom:96px!important}
+}
+
+@media(max-width:430px){
+  .v14-side,.v14-side nav{height:80px!important}.v14-side nav button{height:80px!important;font-size:9px!important}.v14-side nav button span{width:34px!important;height:34px!important}.v14-side nav button.active span{width:38px!important;height:38px!important}
+  .v14-world{height:492px!important;min-height:492px!important}.v14-welcome h1{font-size:52px!important}
+  .v14-cardrow article{height:204px!important;min-height:204px!important;padding:13px 9px 11px!important}.v14-cardrow h3{font-size:18px!important;min-height:48px!important}.v14-cardrow p{font-size:10px!important}.v14-cardrow button{font-size:10px!important}
+  .points span{width:64px!important;height:70px!important}.points strong{font-size:31px!important}
+  .v14-mapscene{height:345px!important;min-height:345px!important}
+  .profilecard{padding-left:126px!important}.profilecard .avatar{width:88px!important;height:88px!important}.profilecard h2{font-size:21px!important}
+}
