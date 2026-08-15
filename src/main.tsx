@@ -7,4 +7,5 @@ import './v15-map.css';
 import './v17.css';
 import './v171.css';
 
+// V1.7.1 production trigger
 createRoot(document.getElementById('root')!).render(<React.StrictMode><AppV14/></React.StrictMode>);
