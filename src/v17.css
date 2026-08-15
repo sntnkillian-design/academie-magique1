@@ -1,0 +1,55 @@
+/* V1.7 — accueil illustré, inspiré de la maquette mobile finale */
+:root{--v17-gold:#d7a84f;--v17-gold2:#9b6f35;--v17-cream:#f2e5c8;--v17-bg:#02080d;--v17-panel:#06141e;--v17-line:#b887466f}
+.v14-app{background:linear-gradient(180deg,#02080d,#07151f 50%,#02080d)!important;color:var(--v17-cream)}
+.v14-top,.v14-side{background:#02080df2!important;border-color:#9d713c55!important;backdrop-filter:blur(16px)}
+.v14-world{background-image:linear-gradient(180deg,rgba(2,8,13,.03),rgba(2,8,13,.10) 55%,rgba(2,8,13,.88)),linear-gradient(90deg,rgba(2,8,13,.45),rgba(2,8,13,.06) 62%),url('/academy-castle-night.png')!important;background-size:cover!important;background-position:center!important}
+.v14-mapscene{background-image:linear-gradient(180deg,rgba(2,8,13,.06),rgba(2,8,13,.56)),url('/academy-map-night.png')!important;background-size:cover!important;background-position:center!important}
+.v14-loader{background-image:linear-gradient(180deg,rgba(1,5,9,.05),rgba(1,5,9,.18)),url('/loading-castle-night.png')!important;background-size:cover!important;background-position:center!important}
+.v14-loader h1,.v14-loader p,.load-broom,.load-castle,.load-moon{display:none!important}
+
+/* identité Académie */
+.v14-top>.v14-mini-brand{font-size:0!important;display:flex!important;align-items:center!important;gap:10px!important}
+.v14-top>.v14-mini-brand:before{content:"";width:42px;height:48px;background:url('/crest-academy.png') center/contain no-repeat;display:block;flex:none}
+.v14-top>.v14-mini-brand:after{content:'ACADÉMIE\A MAGIQUE';white-space:pre;font:700 14px/1.05 Georgia,serif;color:#e8b95d;letter-spacing:.05em}
+
+/* cartes */
+.v14-cardrow article,.profilecard,.challengecard,.v14-map{position:relative!important;border:1px solid var(--v17-line)!important;background:linear-gradient(160deg,#0a1c28f7,#06131bf7)!important;box-shadow:0 14px 34px #0008,inset 0 0 0 1px #efc36b10!important}
+.v14-cardrow article:before,.profilecard:before,.challengecard:before,.v14-map:before{content:"";position:absolute;inset:6px;pointer-events:none;border:1px solid #d3a44c1b}
+.v14-cardrow article:nth-child(1){background:linear-gradient(150deg,#111a2cf7,#07121df7)!important}
+.v14-cardrow article:nth-child(2){background:linear-gradient(150deg,#10281cf7,#06150ff7)!important}
+.v14-cardrow article:nth-child(3){background:linear-gradient(150deg,#241912f7,#0e0c10f7)!important}
+.v14-cardrow article:nth-child(4){background:linear-gradient(150deg,#0b2133f7,#06121ef7)!important}
+
+/* profil illustré */
+.profilecard .avatar{font-size:0!important;background:url('/profile-student.png') center 18%/cover no-repeat!important;border:1px solid #d4a34f!important;box-shadow:0 0 0 5px #d4a34f0d,0 0 24px #000!important}
+.points span{font-size:0!important;width:58px;height:68px;background:url('/crest-ravenclaw.png') center/contain no-repeat;display:inline-block!important}
+
+/* icônes nav */
+.v14-side nav button span{font-size:0!important;width:25px;height:25px;display:block!important;background-position:center!important;background-size:contain!important;background-repeat:no-repeat!important}
+.v14-side nav button:nth-child(1) span{background-image:url('/icon-home.png')!important}
+.v14-side nav button:nth-child(2) span{background-image:url('/icon-subjects.png')!important}
+.v14-side nav button:nth-child(3) span{background-image:url('/icon-agenda.png')!important}
+.v14-side nav button:nth-child(4) span{background-image:url('/icon-mail.png')!important}
+.v14-side nav button:nth-child(5) span{background-image:url('/icon-profile.png')!important}
+.v14-side nav button:nth-child(6) span{background-image:url('/crest-ravenclaw.png')!important}
+
+/* top-right plume */
+.v14-top .student{font-size:0!important;background:radial-gradient(circle,#0a1922,#02080d)!important;border:1px solid #a77a3f88!important;border-radius:50%!important;overflow:hidden!important}
+.v14-top .student:before{content:'✦';font-size:20px;color:#d7a84f}
+.v14-top .student>span{display:none!important}
+
+@media(max-width:700px){
+ html,body,#root{background:var(--v17-bg)!important}body{overflow-x:hidden}.v14-app{padding-bottom:76px!important}.v14-main{width:100%!important;overflow:hidden}
+ .v14-top{height:76px!important;padding:0 18px!important;justify-content:space-between!important;position:relative!important;z-index:20!important}
+ .v14-top>div:last-child>button:not(.student){display:none!important}.v14-top .student{width:44px!important;height:44px!important;padding:0!important;display:grid!important;place-items:center!important}
+ .v14-world{height:520px!important;background-size:auto 100%!important;background-position:59% center!important;border:0!important;box-shadow:none!important}
+ .v14-world:after{background:linear-gradient(180deg,transparent 56%,#02080de9 100%)!important}
+ .v14-welcome{left:7%!important;right:7%!important;top:40px!important;text-shadow:0 3px 24px #000!important}.v14-welcome>span{font:700 11px Arial,sans-serif!important;letter-spacing:.12em!important;color:#e3ae52!important}.v14-welcome h1{font-size:58px!important;line-height:.9!important;margin:16px 0 24px!important;color:#f6ead1!important}.v14-welcome h1 em{font-size:1.08em!important;color:#fff0cf!important}.v14-welcome blockquote{font-size:15px!important;line-height:1.45!important;max-width:270px!important;border:0!important;padding:0!important;color:#eee0c6!important}.v14-welcome blockquote:after{content:'\A— Albus Dumbledore';white-space:pre;display:block;margin-top:8px;color:#d5a044;font-size:14px}
+ .v14-dashboard{display:block!important;padding:0 13px 22px!important;background:linear-gradient(180deg,#02080d,#05131c 62%,#02080d)!important}.v14-center{width:100%!important}.v14-cardrow{display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;margin-top:-18px!important;position:relative!important;z-index:9!important}.v14-cardrow article{min-height:205px!important;padding:15px 12px!important}.v14-cardrow small{font-size:9px!important;letter-spacing:.1em!important;text-align:center!important;color:#dca74b!important}.v14-cardrow h3{font-size:19px!important;line-height:1.12!important;text-align:center!important;margin:14px 0 8px!important;color:#f2e4ca!important;font-weight:400!important}.v14-cardrow p{font-size:11px!important;line-height:1.45!important;text-align:center!important;color:#c8bcaa!important}.v14-cardrow button{font-size:11px!important;text-align:center!important;color:#e1ad51!important;border-top:1px solid #9b713951!important;padding-top:12px!important}.points{justify-content:center!important;margin:10px 0 0!important}.points strong{font-size:34px!important;color:#edc16b!important}
+ .v14-map{margin-top:10px!important;overflow:hidden!important}.v14-map header{position:absolute!important;left:0;top:0;z-index:7!important;padding:14px!important}.v14-map header small{font-size:10px!important;color:#dfa94b!important}.v14-map h2{display:none!important}.v14-mapscene{height:390px!important;position:relative!important}.map-castle{display:none!important}.room{padding:8px 9px!important;background:#03101be8!important;border:1px solid #c18c4399!important;box-shadow:0 8px 18px #0008!important;color:#f1dfbd!important;backdrop-filter:blur(5px)!important}.room b{font-size:9px!important;line-height:1.15!important}.room span{display:none!important}.r0{left:3%!important;top:15%!important}.r1{left:29%!important;top:26%!important}.r2{right:3%!important;top:15%!important}.r3{left:4%!important;bottom:20%!important}.r4{left:31%!important;bottom:10%!important}.r5{right:3%!important;bottom:20%!important}.v14-mapscene:after{content:'Découvrez chaque lieu, apprenez, grandissez et écrivez votre histoire…'!important;bottom:12px!important;width:82%!important;text-align:center!important;font-size:11px!important;color:#e2d2b6!important}
+ .v14-year{display:none!important}
+ .v14-right{display:flex!important;flex-direction:column!important;gap:10px!important;margin-top:10px!important}.profilecard{min-height:154px!important;padding:18px 16px 16px 140px!important;text-align:left!important}.profilecard>small{display:none!important}.profilecard .avatar{position:absolute!important;left:17px!important;top:21px!important;width:102px!important;height:102px!important;margin:0!important;border-radius:50%!important}.profilecard h2{font-size:24px!important;color:#e5b35a!important;margin:6px 0 1px!important}.profilecard>p{font-size:11px!important;margin:0 0 8px!important}.profilecard dl{display:grid!important;grid-template-columns:1fr 1fr!important;gap:5px 9px!important;padding-top:8px!important;margin:0!important;border-top:1px solid #8e6d3c33!important}.profilecard dt{font-size:8px!important;color:#c49a58!important}.profilecard dd{font-size:9px!important;color:#ddd0bb!important}.profilecard dt:nth-of-type(n+4),.profilecard dd:nth-of-type(n+4){display:none!important}.profilecard button{position:absolute!important;right:14px!important;top:57px!important;width:24px!important;height:38px!important;overflow:hidden!important;font-size:0!important;border:0!important;padding:0!important}.profilecard button:after{content:'›';font-size:38px!important;color:#e4ad4d!important}
+ .challengecard{padding:13px 14px 8px!important}.challengecard>small{display:block!important;text-align:center!important;font-size:11px!important;color:#dfa94b!important;letter-spacing:.1em!important;margin-bottom:6px!important}.challengecard article{padding:12px 4px!important;position:relative!important}.challengecard article b{font-size:13px!important;color:#eee1c9!important}.challengecard article p{font-size:9px!important;color:#aaa091!important;margin:4px 0!important}.challengecard article:after{content:'›';position:absolute;right:3px;top:15px;color:#dfa848;font-size:24px}.challengecard>button{width:100%!important;text-align:center!important;padding:12px 0!important;color:#dfaa4d!important}
+ .v14-side{position:fixed!important;left:0!important;right:0!important;bottom:0!important;top:auto!important;width:100%!important;height:72px!important;border-top:1px solid #9d713c70!important;z-index:50!important}.v14-brand,.v14-values{display:none!important}.v14-side nav{display:grid!important;grid-template-columns:repeat(6,1fr)!important;height:72px!important}.v14-side nav button{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:3px!important;padding:5px 1px!important;font-size:8px!important;border:0!important}.v14-side nav button:nth-child(n+7){display:none!important}.v14-side nav button span{width:24px!important;height:24px!important}.v14-side nav button.active{background:linear-gradient(180deg,#d3a14818,transparent)!important;border-top:2px solid #d7a84f!important;color:#edc16b!important}
+}
+@media(max-width:430px){.v14-world{height:500px!important}.v14-welcome h1{font-size:52px!important}.v14-cardrow article{min-height:196px!important;padding:14px 10px!important}.v14-cardrow h3{font-size:18px!important}.v14-mapscene{height:360px!important}.room{padding:7px 7px!important}.profilecard{padding-left:130px!important}.profilecard .avatar{width:92px!important;height:92px!important}}
